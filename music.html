@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music Player</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, white, white);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .player {
+      background: white;
+      width: 350px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .album-cover {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      object-fit: cover;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    .album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.album-cover:hover img {
+    transform: scale(1.1);
+}
+    
+
+    .song-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .song-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .artist-name {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 5px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 40%;
+      height: 100%;
+      background: #667eea;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 25px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      background: #f5f5f5;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      background: rgb(235, 235, 237);
+      transform: scale(1.1);
+    }
+
+    .play-btn {
+      width: 60px;
+      height: 60px;
+      background: #667eea;
+      color:white;
+      font-size: 24px;
+    }
+
+    .play-btn:hover {
+      background: #5568d3;
+    }
+
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="player">
+    <div class="album-cover">
+        <img src="https://play-lh.googleusercontent.com/9t8XBqzsFgeIjxWOxlLRQ6eRj3ZFcawkEKfUfQNLXAVylDMOipZs3rpEsApIkQS7POA-=w3840-h2160-rw" alt="Music image ">
+        🎵</div>
+    
+  
+
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <div class="time">
+      <span>0:15</span>
+      <span>3:45</span>
+    </div>
+
+    <div class="controls">
+      <button class="btn">⏮</button>
+      <button class="btn play-btn">▶</button>
+      <button class="btn">⏭</button>
+    </div>
+
+    <div class="volume">
+      <span class="volume-icon">🔊</span>
+      <div class="volume-bar">
+       
+      </div>
+    </div>
+  </div>
+</body>
+</html>
